@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --max-width: 1300px;
+    --primary: #fff;
+}
+
+@mixin button($bg-color, $color, $border-color, $scale, $bg-sec-color, $sec-color) {
+    background-color: $bg-color;
+    color: $color;
+    font-size: clamp(10px, 3em, 16px);
+    padding: 10px 20px;
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale($scale);
+        cursor: pointer;
+        font-weight: 900;
+        background-color: $bg-sec-color;
+        color: $sec-color;
+    }
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #111;
+
+    * {
+        font-family: "Montserrat", sans-serif;
+        box-sizing: border-box;
+    }
+}
+
+.main {
+    min-height: 500px;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+    max-width: var(--max-width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+
+    &--background {
+        height: auto;
+        width: 100%;
+
+        video {
+            border-radius: 20px;
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: top;
+            filter: brightness(0.7);
+        }
+    }
+
+    &--body {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--primary);
+        border-radius: 20px;
+        padding: 20px;
+        gap: 20px;
+        color: #000;
+        max-width: 700px;
+
+        * {
+            margin: 0px;
+        }
+    }
+
+    &--carusel {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        button {
+            font-weight: 300;
+            @include button(transparent, #fff, #fff, 1, #fff, #000);
+        }
+    }
+}
