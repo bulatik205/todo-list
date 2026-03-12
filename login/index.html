@@ -21,10 +21,19 @@
         </div>
 
         <div class="main--body">
-            <fieldset>
+            <fieldset id="email-input">
                 <legend>Эл. почта</legend>
-                <input type="email" minlength="2" maxlength="128" required placeholder="my@mail.love">
-                <button>Отправить код</button>
+                <input type="email" minlength="2" maxlength="128" required placeholder="my@mail.love" id="email">
+                <button>Отправить</button>
+            </fieldset>
+
+            <fieldset id="mail-verify">
+                <legend>Подтверждение</legend>
+                <p>Мы отправили на почту инструкцию для входа</p>
+
+                <fieldset>
+                    <p>Если письма нет, проверьте спам</p>
+                </fieldset>
             </fieldset>
         </div>
 
