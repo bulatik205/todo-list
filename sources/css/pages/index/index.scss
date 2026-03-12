@@ -106,6 +106,10 @@ body {
             button {
                 @include button(transparent, #000, #000, 1, #fff, #000);
             }
+
+            fieldset {
+                font-size: clamp(14px, 0.5em, 20px);
+            }
         }
     }
 
