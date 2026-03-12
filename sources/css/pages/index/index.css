@@ -63,6 +63,39 @@ body * {
 .main--body * {
   margin: 0px;
 }
+.main--body fieldset {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+}
+.main--body fieldset legend {
+  font-weight: 900;
+}
+.main--body fieldset input {
+  padding: 10px 10px 10px 10px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 1px solid #333;
+}
+.main--body fieldset button {
+  background-color: transparent;
+  color: #000;
+  font-size: clamp(10px, 3em, 16px);
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.main--body fieldset button:hover {
+  transform: scale(1);
+  cursor: pointer;
+  font-weight: 900;
+  background-color: #fff;
+  color: #000;
+}
 .main--carusel {
   width: 100%;
   display: flex;

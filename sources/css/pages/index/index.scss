@@ -83,6 +83,30 @@ body {
         * {
             margin: 0px;
         }
+
+        fieldset {
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            flex-direction: column;
+            gap: 10px;
+
+            legend {
+                font-weight: 900;
+            }
+
+            input {
+                padding: 10px 10px 10px 10px;
+                font-weight: 600;
+                border-radius: 5px;
+                border: 1px solid #333;
+            }
+
+            button {
+                @include button(transparent, #000, #000, 1, #fff, #000);
+            }
+        }
     }
 
     &--carusel {
